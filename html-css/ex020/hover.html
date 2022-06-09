@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Filho */
+        /* Os parágrafos (filhos) da div... invisível */        
+        div > p { 
+            display: none; 
+        }
+        
+        /* Pseudo-classe (efeito) */  
+        /* Quando passar em cima da div... ficará vermelha */      
+        div:hover { 
+            color: red; 
+        }
+
+        /* Pseudo-classe (efeito) */ /* Filho */
+        /* Quando passar em cima da div... o parágrafo (filho)... visível */
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do exemplo</p>
+</body>
+</html>
+
+
+

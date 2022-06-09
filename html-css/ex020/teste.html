@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        .linha > .sublinha {
+            display: none;            
+        }
+
+        .linha:hover {
+            color: blueviolet;
+        }
+
+        .linha:hover > .sublinha {
+            display: block;
+            color: black;            
+        }
+
+        .item:active {
+            color: aqua;
+        }
+
+        .item:active::before {
+            content: '=> ';
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Efeito em TAG e Classe</h1>
+    <h2>Primeira Lista</h2>
+    <ol>
+        <li class="linha">Linha
+            <ol class="sublinha">
+                <li class="item">Primeira sublinha</li>
+                <li class="item">Segunda sublinha</li>
+                <li class="item">Terceira sublinha</li>
+                <li class="item">Quarta sublinha</li>
+            </ol>
+        </li>
+    </ol>
+
+    <h2>Segunda Lista</h2>
+    <ol>
+        <li class="linha">Linha
+            <ol class="sublinha">
+                <li class="item">Primeira</li>
+                <li class="item">Segunda</li>
+                <li class="item">Terceira</li>
+                <li class="item">Quarta</li>
+                <li class="item">Quinta</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+
+</html>
+
+
+
