@@ -25,12 +25,32 @@
             border: 1px solid black;
             padding: 8px;
         }
+
+        .destaque {
+            background-color: chartreuse;
+        }
+
+        col.cnome {
+            background-color: chartreuse;
+        }
+
+        col.cgrupo {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
     <h1>Exercício - Tabelas</h1>
 
     <table>
+        <colgroup>
+            <col class="cnome"> <!-- Primeira coluna -->
+            <col class="cgrupo" span="3">
+            <col class="csexo"> <!-- Segunda coluna -->
+            <col class="cidade"> <!-- Terceira coluna -->
+            <col class="cprof"> <!-- Quarta coluna -->
+        </colgroup>
+        
         <caption>Cadastro</caption>
         <tr>
             <th scope="col">Nome</th>
