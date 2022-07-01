@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Teste</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 300px;
+            display: block;
+            margin: auto;
+        }
+
+        table {
+            width: 500px;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky; /* "Estado" e "Polulação" colado no topo */
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody tr:nth-child(odd) { /* odd(ímpar) */
+            background-color: white;            
+        }
+
+        tbody tr:nth-child(even) { /* even(par) */
+            background-color: lightgray;
+        }
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        
+        TABLE
+            CAPTION (LEGENDA)
+
+            THEAD (CABEÇA)
+                TR, TD, TH
+            TBODY (CORPO)
+                TR, TD, TH
+            TFOOT (RODAPÉ)
+                TR, TD, TH
+    -->
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead> <!-- CABEÇA -->
+            <tr>
+                <th scope="col">Estado</th> <!-- col (título da coluna) -->
+                <th scope="col" style="width: 50px;">População</th> <!-- col (título da coluna) -->
+            </tr>
+        </thead>
+
+        <tbody> <!-- CORPO -->
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr> 
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.985.284</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.597.484</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.466.630</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.674.793</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9.240.580</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8.777.124</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.338.473</td>
+            </tr>
+        </tbody>
+
+        <tfoot> <!-- RODAPÉ -->
+            <tr>
+                <th scope="row">Total de Habitantes</th> <!-- row (título da linha) -->
+                <td class="num"><strong>136.264.360</strong></td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+</html>
+
